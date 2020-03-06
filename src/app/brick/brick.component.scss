@@ -1,0 +1,88 @@
+.triangle{ 
+    float: left;
+    .mask img{
+      &.first{
+        transform-origin: bottom left;
+        transform:translate(-100%); 
+    }
+    &.second{
+        transform-origin: bottom left;
+        transform: translate(50% ,-100%)  rotate(180deg);
+    }
+    &.third{
+        transform-origin: bottom left;
+        transform: translate(-50%);  
+    }    
+    &.fourth{
+        transform-origin: bottom left;
+        transform: translate(100% ,-100%)  rotate(180deg);    
+    }
+    }
+    &.first{
+        transform-origin: bottom left;
+        transform:translate(-100%); 
+    }
+    &.second{
+        transform-origin: bottom left;
+        transform: translate(0%) rotate(-60deg);
+    }
+    &.third{
+        transform-origin: bottom left;
+        transform: translate(-50.5%,-100%) rotate(120deg);     
+    }
+    &.fourth{
+        transform-origin: bottom left;
+        transform: translate(50% ,-100%)  rotate(180deg);
+    }
+    &.fifth{
+        transform-origin: bottom left;
+        transform: translate(0%,0%) rotate(-120deg);
+    }
+    &.sixth{
+        transform-origin: bottom left;
+        transform: translate(-50.5%,-100%) rotate(60deg);
+    }
+    &.seventh{
+        transform-origin: bottom left;
+        transform: translate(50.5%,0%) rotate(-120deg);   
+    }
+
+    &.eighth{
+        transform-origin: bottom left;
+        transform: translate(0%,-100%) rotate(60deg);  
+    }
+
+    &.ninth{
+        transform-origin: bottom left;
+        transform: translate(-50%);  
+    }
+
+    &.tenth{
+        transform-origin: bottom left;
+        transform: translate(50%) rotate(-60deg);
+    }
+
+    &.eleventh{
+        transform-origin: bottom left;
+        transform: translate(-0.5%,-100%) rotate(120deg);
+    }
+    
+    &.twelfth{
+        transform-origin: bottom left;
+        transform: translate(100% ,-100%)  rotate(180deg);
+        
+    }
+   
+}
+.rowWrapper{
+    width: 100%;
+    overflow: hidden;
+    .rowContainer {
+        position: relative;
+        width: 140%;
+        .up,.down{
+            position: absolute;
+            top:0
+        }
+    }
+}

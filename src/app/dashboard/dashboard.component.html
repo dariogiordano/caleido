@@ -1,0 +1,36 @@
+<div class="settingsContainer">
+   <h3 style="color:chocolate">CALEIDO<span style="color:blueviolet">MIA</span></h3>
+    <image-cropper
+        style="max-width: 96%; padding-top: 2%; max-height: 70vh; text-align: left!important;"
+        [imageFile]="imageChangedEvent"
+        [maintainAspectRatio]="true"
+        [aspectRatio]="10 / 8.66"
+        format="png"
+        (imageCropped)="onImageCropped($event)"
+        (imageLoaded)="imageLoaded()"
+        (cropperReady)="cropperReady()"
+        (loadImageFailed)="loadImageFailed()"
+        [canvasRotation]="rot"
+    ></image-cropper>
+Carica un immagine <br > <br>
+
+<input type="file" (change)="fileChangeEvent($event)" accept="image/*" />
+<br > <br> <br>
+<div *ngIf="imageChangedEvent">
+    Rotazione immagine  <br><br>
+    <mat-slider
+        thumbLabel
+        [displayWith]="formatLabel"
+    
+        min="-2"
+        max="2"
+        step="0.01"
+        value="0"
+        (change)="changeRot($event)"
+
+    ></mat-slider>
+    <br>
+    Dimendione caleidoscopio <br><br>
+    <mat-slider  thumbLabel min="100" max="200" step="1" value="150" (change)="onChangeW($event)"></mat-slider>
+    </div>
+</div>

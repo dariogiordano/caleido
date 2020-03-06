@@ -1,0 +1,20 @@
+
+<div class="rowWrapper">
+    <div class="rowContainer" [ngStyle]="{'height':h+'px'}">
+         <div class="up">
+            <app-triangle-image [imgSrc]="imgSrc" class="triangle" *ngFor="let number of itemsNr" class="triangle {{getClass(number,false,false)}}" [ngStyle]="{'width': w+'px','height':h+'px'}"></app-triangle-image>
+         </div>
+         <div class="down">
+            <app-triangle-image [imgSrc]="imgSrc" *ngFor="let number of itemsNr" class="triangle {{getClass(number,true,false)}}" [ngStyle]="{'width': w+'px','height':h+'px'}"></app-triangle-image>
+        </div> 
+    </div>
+    <div class="rowContainer" [ngStyle]="{'height':h+'px'}">
+                <div class="up">
+         <app-triangle-image [imgSrc]="imgSrc" class="triangle" *ngFor="let number of itemsNr" class="triangle {{getClass(number,false,true)}}" [ngStyle]="{'width': w+'px','height':h+'px'}"></app-triangle-image>
+        </div>
+        <div class="down">
+           <app-triangle-image [imgSrc]="imgSrc" *ngFor="let number of itemsNr" class="triangle {{getClass(number,true,true)}}" [ngStyle]="{'width': w+'px','height':h+'px'}"></app-triangle-image>
+        </div> 
+
+    </div>
+</div>

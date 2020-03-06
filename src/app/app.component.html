@@ -1,0 +1,6 @@
+<div style=" display:flex">
+    <div style="width: 70%;height: 100vh; overflow-y: hidden;" *ngIf="croppedImage">
+        <app-brick *ngFor="let number of rowNr" [w$]="w$.asObservable()" [imgSrc]="croppedImage"></app-brick>
+    </div>
+    <app-dashboard style="min-width:530px; width: 30%; padding:0 15px;height: 100vh; overflow-y: auto;" (imageCroppedEvent)="imageCropped($event)" (changeWidth)="changeW($event)" ></app-dashboard>
+</div>
