@@ -8,7 +8,7 @@ import { TriangleImageComponent } from './triangle-image/triangle-image.componen
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrickComponent } from './brick/brick.component';
 import { MatSliderModule } from '@angular/material/slider';
-import { Ng2ImgMaxModule } from 'ng2-img-max';
+import {NgxImageCompressService} from 'ngx-image-compress';
 
 @NgModule({
   declarations: [
@@ -21,10 +21,9 @@ import { Ng2ImgMaxModule } from 'ng2-img-max';
     BrowserModule,
     BrowserAnimationsModule,
     ImageCropperModule,
-    MatSliderModule,
-    Ng2ImgMaxModule
+    MatSliderModule
   ],
-  providers: [],
+  providers: [NgxImageCompressService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

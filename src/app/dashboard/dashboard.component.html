@@ -14,7 +14,8 @@
     ></image-cropper>
 Carica un immagine <br > <br>
 
-<input type="file" (change)="fileChangeEvent($event)" accept="image/*" />
+<button (click)="compressFile()">SCEGLI UN FILE</button>
+
 <br > <br> <br>
 <div *ngIf="imageChangedEvent">
     Rotazione immagine  <br><br>
